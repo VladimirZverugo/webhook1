@@ -5,7 +5,7 @@
 
 
 <form>
-  <label for="email">Email</label>
+  <label for="email">Email</label>https://github.com/VladimirZverugo/webhook1/blob/main/zapierhook.html
   <input type="email" name="email" id="email" />
 
   <button type="submit">Submit</button>
@@ -23,11 +23,18 @@ function handleSubmit(event) {
   const value = data.get('email');
 
 console.log(JSON.stringify(value));
+ 
 }
 
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
 
+  
+  
+   const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(originalData, null, 2)], {
+    type: "text/plain"
+  }));
 </script>
 
 
